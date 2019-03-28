@@ -1,7 +1,6 @@
-FROM resin/raspberrypi3-python
+FROM balenalib/raspberrypi3-debian:jessie-build
 
 RUN apt-get update || apt-get update
-RUN apt-get -yq --no-install-recommends apt-transport-https
 RUN apt-get install -yq --no-install-recommends \
     bluez \
     bluez-firmware \
@@ -9,7 +8,7 @@ RUN apt-get install -yq --no-install-recommends \
     pwgen \
     python-numpy \
     python-smbus && \
-apt-get clean && rm -rf /var/lib/apt/lists/*
+apt-get clean && rm -rf /var/lib/apt/lists/*; exit 0;
 
 # Set our working directory
 WORKDIR /usr/src/app
