@@ -1,4 +1,4 @@
-FROM resin/raspberrypi3-python:3.4
+FROM resin/raspberrypi3-python:2.7
 
 RUN apt-get update || apt-get update
 RUN apt-get install -yq --no-install-recommends \
