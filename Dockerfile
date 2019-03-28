@@ -1,4 +1,4 @@
-FROM resin/raspberrypi3-python
+FROM balenalib/raspberrypi3-python
 
 RUN apt-get update && apt-get install -yq --no-install-recommends \
     bluez \
