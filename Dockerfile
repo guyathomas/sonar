@@ -1,6 +1,6 @@
 FROM resin/raspberrypi3-python
 
-RUN apt-get update
+RUN apt-get update || apt-get update
 RUN apt-get -yq --no-install-recommends apt-transport-https
 RUN apt-get install -yq --no-install-recommends \
     bluez \
